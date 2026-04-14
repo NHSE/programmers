@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unordered_set>
+#include <unordered_map>
 
 using namespace std;
 
@@ -11,7 +12,8 @@ int main()
     string s;
     cin >> s;
 
-    unordered_set<string> set;
+    //unordered_set<string> set;
+    unordered_map<string, int> set;
 
     int i = 1;
     int standard = s.size()-1;
@@ -26,7 +28,7 @@ int main()
         else
         {
             string temp = s.substr(standard - index, i);
-            set.insert(temp);
+            set[temp] = 0;
             index--;
         }
     }
